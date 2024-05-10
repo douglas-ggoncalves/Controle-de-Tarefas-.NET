@@ -14,7 +14,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddEntityFrameworkSqlServer()
     .AddDbContext<SystemTaskDBContext>(
-        optionsAction => optionsAction.UseSqlServer(builder.Configuration.GetConnectionString("DataBase"))    
+        optionsAction => optionsAction.UseSqlServer(builder.Configuration.GetConnectionString("DataBase"))
     );
 
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
@@ -35,11 +35,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseCors("AllowSpecificOrigin");
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<SystemTaskDBContext>();
+    dbContext.Database.Migrate();
+}
 
 app.Run();
