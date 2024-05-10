@@ -1,0 +1,932 @@
+/* ---------- Colors ---------- */
+$blue-color: #2693FF;
+$lightBlue-color: #E9F4FB;
+$dark-blue-color: #1182F2;
+$white-color: #FFFFFF;
+$gray-color: #BFDAEB;
+$darkGray-color: #77899E;
+$light-gray-color: #F4FBFF;
+$lightGray2-color: #E2EEF5;
+$green-color: #1AD18F;
+$green-dark-color: #5ECDA5;
+$red-color: #FF4874;
+$red2-color: #F491BA;
+$orange-color: #FFC42E;
+/* ---------- End Colors ---------- */
+
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: 'Gilroy Black';
+  font-style: normal;
+  src: url('../fonts/SVN-Gilroy Black.ttf');
+}
+
+@font-face {
+  font-family: 'Gilroy Bold';
+  font-style: normal;
+  src: url('../fonts/SVN-Gilroy Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Gilroy Italic';
+  font-style: normal;
+  src: url('../fonts/SVN-Gilroy Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Gilroy Light';
+  font-style: normal;
+  src: url('../fonts/SVN-Gilroy Light.ttf');
+}
+
+@font-face {
+  font-family: 'Gilroy Medium';
+  font-style: normal;
+  src: url('../fonts/SVN-Gilroy Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Gilroy Regular';
+  font-style: normal;
+  src: url('../fonts/SVN-Gilroy Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Gilroy SemiBold';
+  font-style: normal;
+  src: url('../fonts/SVN-Gilroy SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Gilroy Thin';
+  font-style: normal;
+  src: url('../fonts/SVN-Gilroy Thin.ttf');
+}
+/* ---------- End Fonts ---------- */
+  
+/* ---------- Global Changes ---------- */
+*{
+  margin: 0;
+  padding: 0;
+}
+  
+section{
+  width: 100%;
+}
+  
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+  
+button{
+  cursor: pointer;
+  border: none;
+}
+
+.modal .modal-content form input, .modal .modal-content form textarea {
+  margin-top: .5rem;
+}
+
+.v-label.v-label--active.theme--light {
+    font-weight: 600 !important;
+    font-size: 1.10rem !important;
+    opacity: 0.7 !important;
+    font-family: "Gilroy Regular";
+    color: rgba(0, 0, 0, 0.87);
+}
+/* ---------- End Global Changes ---------- */
+
+/* ---------- Home Page ---------- */
+#homePage {
+  div#content {
+    height: 100vh;
+    width: 100%;
+    margin-left: auto;
+    position: relative;
+
+    div#itemsMenu {
+      color: $white-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: $blue-color;
+      width: 100%;
+
+      >div{
+        width: 100%;
+      }
+
+      span {
+        display: block;
+        text-align: center;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(191, 218, 235, 0.5);
+        width: 100%;
+
+        &:hover {
+          background-color: $dark-blue-color;
+          cursor: pointer;
+        }
+
+        &.active {
+          background-color: $dark-blue-color;
+        }
+
+        &#first {
+          border-top: 1px solid rgba(191, 218, 235, 0.5);
+        }
+      }
+
+      svg {
+        display: block;
+        font-size: 1.6rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      p {
+        font-size: 0.45rem;
+        margin-top: 0.5rem;
+        color: $white-color;
+        font-family: "Gilroy Regular";
+        background-color: transparent;
+      }
+    }
+    
+    div#subMain{
+      position: relative;
+      height: 100vh;
+      background-color: $lightBlue-color;
+    }
+      
+    div#spacer{
+      height: 1vh;
+      background-color: $light-gray-color;
+    }
+
+    #leftContent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      -webkit-box-shadow: 7px 7px 12px -17px rgba(0, 0, 0, 0.95);
+      box-shadow: 7px 7px 12px -17px rgba(0, 0, 0, 0.95);
+      background-color: $light-gray-color;
+      height: 22%;
+    
+      > div {
+        > button {
+          margin-left: 1rem;
+        }
+      }
+
+      button#onlyInPending, button#onlyInProgress, button#onlyFinished{
+        display: none;
+      }
+    
+      button.roundedUrgent,
+      button.roundedImportant,
+      button.roundedOthers {
+        //text-align: center;
+        //display: flex;
+        //align-items: center;
+    
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 16px;
+          width: 16px;
+          color: $white-color;
+          text-align: center;
+          vertical-align: center;
+          line-height: 1;
+          border-radius: 50%;
+          margin-left: 0.3rem;
+          padding: 0.7rem;
+          margin-bottom: 0;
+        }
+      }
+    
+      button.roundedUrgent {
+        button {
+          background-color: $red-color;
+        }
+      }
+    
+      button.roundedImportant {
+        button {
+          background-color: $orange-color;
+        }
+      }
+    
+      button.roundedOthers {
+        button {
+          background-color: $blue-color;
+        }
+      }
+    
+      h4 {
+        margin-bottom: 0.5rem;
+        display: block;
+        font-family: "Gilroy Medium";
+        opacity: 0.85;
+      }
+    
+      button {
+        background-color: transparent;
+        font-family: "Gilroy SemiBold";
+        margin-bottom: 0.3rem;
+        display: block;
+        font-size: 0.8rem;
+    
+        &.active {
+          color: $blue-color;
+        }
+    
+        &:hover {
+          color: $blue-color;
+        }
+    
+        svg {
+          font-size: 0.55rem;
+          padding-right: 0.4rem;
+        }
+      }
+    }
+    
+    #rightContent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $lightBlue-color;
+      height: 68%;
+      margin-left: auto;
+      font-family: "Gilroy Medium";
+      overflow-y: auto;
+
+      > div {
+        min-height: 85%;
+        max-height: 85%;
+        min-width: 90%;
+        max-width: 90%;
+      }
+
+      h3 {
+        margin-bottom: 0.3rem;
+      }
+
+      p {
+        color: $darkGray-color;
+      }
+
+      span.active {
+        color: $blue-color;
+
+        &#quantTask {
+          text-decoration: underline;
+        }
+      }
+
+      .input-container {
+        display: flex;
+        border-radius: 4px;
+        border: 2px solid $gray-color;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      div.items.taskActive {
+        background-color: #F4FAFD;
+
+        span.descItem {
+          text-decoration: line-through;
+          text-decoration-thickness: 1px;
+        }
+
+        svg {
+          color: $green-color;
+          opacity: 0.6;
+        }
+
+        span.descItem {
+          opacity: 0.6;
+        }
+
+        div.final {
+          div.chip {
+            opacity: 0.6;
+          }
+        }
+      }
+
+      div.items {
+        word-break: break-all;
+        margin-bottom: 0.5rem;
+        background-color: $white-color;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        > div {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+
+        div.left {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          width: 100%;
+          height: 100%;
+          padding-bottom: 1.5rem;
+          padding-top: 1.5rem;
+        }
+
+        div.final {
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+          min-width: 50%;
+
+          .editPen, .deleteTrash {
+           // color: white;
+            border: none;
+            cursor: pointer;
+            z-index: 999;
+            margin-right: 0.5rem;
+
+            svg {
+              font-size: 1.25rem !important;
+              min-width: 5px !important;
+            }
+          }
+
+          .editPen{
+            svg{
+              color: $orange-color;
+            }
+          }
+
+          .deleteTrash{
+            svg{
+              color: $red-color;
+            }
+          }
+
+          .dropbtn {
+            color: white;
+            border: none;
+            cursor: pointer;
+            z-index: 999;
+            position: relative;
+            margin-right: 0.5rem;
+
+            svg {
+              font-size: 1.25rem !important;
+              min-width: 5px !important;
+            }
+          }
+
+          .dropdown {
+            position: relative;
+            display: inline-block;
+            padding: 0.35rem 0 0 0.3rem;
+          }
+
+          .dropdown:hover .dropdown-content {
+            display: block !important;
+          }
+
+          .chip {
+            display: inline-block;
+            color: white;
+            padding: 2px 13px;
+            height: 17px;
+            font-size: 14px;
+            line-height: 17px;
+            border-radius: 25px;
+            margin: auto 0 auto auto;
+
+            &.urgent {
+              background-color: $red-color;
+            }
+
+            &.important {
+              background-color: $orange-color;
+            }
+
+            &.others {
+              background-color: $blue-color;
+            }
+          }
+        }
+
+        span {
+          font-family: "Gilroy SemiBold";
+          cursor: pointer;
+        }
+
+          svg {
+            font-size: 1.7rem;
+            color: $lightGray2-color;
+            cursor: pointer;
+          }
+
+          button {
+            margin-left: auto;
+            background-color: transparent;
+
+            svg {
+              color: $gray-color;
+            }
+          }
+      }
+
+    svg {
+      color: $gray-color;
+      min-width: 50px;
+      text-align: center;
+      position: relative;
+      margin: auto 0;
+      top: 50%;
+      right: 0;
+      cursor: text;
+    }
+
+      .input-field {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        outline: none;
+        background: transparent;
+        position: relative;
+        color: $darkGray-color;
+      }
+    }
+  
+    #addTask {
+      background-color: #1AD18F;
+      color: $white-color;
+      position: absolute;
+      right: 0;
+      z-index: 1000;
+      font-size: 1.5rem;
+      bottom: 0;
+      padding: 1rem;
+      height: 55px;
+      width: 55px;
+      border-radius: 50%;
+      margin-bottom: 2rem;
+      margin-right: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+/* ---------- End Home Page ---------- */
+
+/* ---------- Modals ---------- */
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+
+  
+  .titleS{
+    font-family: "Gilroy Regular";
+    font-weight: 600;
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    
+    /* Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 1.3rem;
+      font-weight: bold;
+
+      &:hover, &:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    h3 {
+      display: inline-block;
+      font-family: "Gilroy Bold";
+      margin-bottom: 1.5rem;
+    }
+
+    span {
+      margin-left: auto;
+      margin-bottom: .3rem;
+    }
+
+    form {
+      font-family: "Gilroy Regular";
+
+      span {
+        font-weight: 600;
+        font-size: 0.85rem;
+        opacity: 0.7;
+      }
+
+      input, textarea {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+        font-family: "Gilroy Semibold";
+        border: 2px solid $gray-color;
+        border-radius: 4px;
+        padding: .5rem;
+        opacity: 0.8;
+        font-size: 0.85rem;
+
+        &:focus-visible {
+          outline: none;
+          border: 2px solid $blue-color;
+        }
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+  }
+
+  .modalFooter, .modalStatusFooter {
+    //display: block;
+    padding-bottom: 1rem;
+
+    span {
+      //display: flex;
+      //align-items: center;
+      //float: left;
+      margin-right: .5rem;
+      font-family: "Gilroy Regular";
+      font-weight: 600;
+      font-size: 0.7rem;
+      opacity: 0.7;
+      cursor: pointer;
+      vertical-align: middle;
+
+      button {
+        background-color: transparent;
+        border: 2px solid $gray-color;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        margin-right: .3rem;
+        
+        &.buttonActive {
+          background-color: $green-color;
+        }
+      }
+    }
+
+    button#add, button#cancelEdit, button#saveButton {
+      float: right;
+      color: $white-color;
+      border-radius: 4px;
+      padding: .5rem 1rem;
+
+      &.buttonActive {
+        background-color: #A6C1D2;
+      }
+    }
+
+    button#add{
+      background-color: $green-color;
+    }
+
+    button#cancelEdit{
+      background-color: #A6C1D2;
+    }
+
+    button#saveButton{
+      background-color: $green-color;
+      margin-right: .3rem;
+      margin-left: .3rem;
+    }
+    
+    div#checkbox {
+      margin-bottom: .5rem;
+      font-family: "Gilroy Regular";
+      font-weight: 600;
+      opacity: 0.7;
+      font-size: 0.7rem;
+
+      input {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        vertical-align: middle;
+        appearance: none;
+        border: 2px solid $gray-color;
+        -webkit-appearance: none;
+        cursor: pointer;
+
+        &.active {
+          background-color: $green-color;
+        }
+      }
+
+      label {
+        vertical-align: middle;
+        cursor: pointer;
+        margin-left: 0.3rem;
+      }
+    }
+  }
+}
+
+.modalDelete {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  text-align: center;
+  font-family: "Gilroy Regular";
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    border-radius: 4px;
+
+    div#icon {
+      background-color: #EDF6FC;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+      width: 100px;
+      padding: .7rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      svg {
+        height: 70px;
+        width: 70px;
+        color: $darkGray-color;
+      }
+    }
+
+    h3 {
+      line-height: 1;
+      margin-top: .7rem;
+      margin-bottom: 0;
+
+      span {
+        color: $red-color;
+      }
+    }
+
+    span#subTitle {
+      display: block;
+      margin-bottom: 1.2rem;
+      font-family: "Gilroy Regular";
+      font-weight: 600;
+      margin-top: .25rem;
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    button {
+      color: white;
+      padding: .5rem 1rem;
+      border-radius: 4px;
+      margin-left: .3rem;
+      margin-right: .3rem;
+      
+    }
+
+    button#cancel {
+      background-color: $green-color;
+    }
+
+    button#confirm {
+      background-color: #FF4874;
+    }
+  }
+}
+/* ---------- End Modals ---------- */
+
+/* ---------- Media Queries ---------- */
+
+// Phones (less than 450px)
+@media (max-width: 450px) {
+  .modalDelete .modal-content, .modal .modal-content {
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+  }
+}
+
+// Tablets (greater than 576px)
+@media (min-width: 576px) {
+  #rightContent {
+    .dropdown {
+      padding: 0.35rem 0.5rem 0 0.5rem !important;
+    }
+  }
+
+  #homePage div#content div#itemsMenu p {
+    font-size: 0.6rem;
+  }
+
+  #homePage {
+    div#content {
+      #leftContent {
+        height: 4vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+
+        h4 {
+          display: none;
+        }
+
+        >div {
+          display: flex;
+          align-items: center;
+
+          >button {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+  
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  #homePage {
+    div#content {
+      div#itemsMenu p {
+        font-size: 0.7rem;
+      }
+
+      div#spacer {
+        display: none;
+      }
+
+      #leftContent {
+        height: 100%;
+        width: 180px;
+        float: left;
+
+        button#onlyInPending, button#onlyInProgress, button#onlyFinished{
+          display: block;
+        }
+
+        h4 {
+          display: block;
+        }
+
+        >div {
+          display: block;
+        }
+
+        h4 {
+          margin-bottom: 3rem;
+        }
+
+        button {
+          margin-bottom: 0.8rem;
+          font-size: 1rem !important;
+        }
+
+        #onlyFinished {
+          margin-bottom: 0;
+        }
+      }
+
+      #rightContent {
+        height: 100%;
+
+        h3 {
+          font-size: 1.3em;
+        }
+
+        >div {
+          min-height: 70%;
+          max-height: 70%;
+          max-width: 95%;
+
+          >p {
+            font-size: 1.1rem;
+          }
+        }
+
+        div.items div.final {
+          min-width: 30% !important;
+        }
+      }
+    }
+  }
+
+  .modal {
+    .modal-content {
+      max-width: 70%;
+    }
+
+    div.modalFooter, div.modalStatusFooter {
+      span {
+        font-size: 0.8rem;
+      }
+
+      div#checkbox {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+  
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  #rightContent {
+    >div {
+      min-width: 70% !important;
+      >p {
+        font-size: 1.25rem !important;
+      }
+    }
+  }
+
+  .modalDelete {
+    .modal-content {
+      width: 25%;
+    }
+  }
+
+  #homePage {
+    div#content {
+      div#itemsMenu p {
+        font-size: 0.9rem !important;
+      }
+      
+      #rightContent {
+        .input-field {
+          font-size: 1.1rem !important;
+        }
+
+        div.items {
+          div.left {
+            font-size: 1.1rem !important;
+          }
+
+          .chip {
+            font-size: 1.1rem !important;
+            line-height: 1 !important;
+            padding: 4px 13px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  
+}
+/* ---------- End Media Queries ---------- */

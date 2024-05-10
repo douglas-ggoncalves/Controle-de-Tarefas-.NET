@@ -1,0 +1,726 @@
+/* ---------- Colors ---------- */
+/* ---------- End Colors ---------- */
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: "Gilroy Black";
+  font-style: normal;
+  src: url("../fonts/SVN-Gilroy Black.ttf");
+}
+@font-face {
+  font-family: "Gilroy Bold";
+  font-style: normal;
+  src: url("../fonts/SVN-Gilroy Bold.ttf");
+}
+@font-face {
+  font-family: "Gilroy Italic";
+  font-style: normal;
+  src: url("../fonts/SVN-Gilroy Italic.ttf");
+}
+@font-face {
+  font-family: "Gilroy Light";
+  font-style: normal;
+  src: url("../fonts/SVN-Gilroy Light.ttf");
+}
+@font-face {
+  font-family: "Gilroy Medium";
+  font-style: normal;
+  src: url("../fonts/SVN-Gilroy Medium.ttf");
+}
+@font-face {
+  font-family: "Gilroy Regular";
+  font-style: normal;
+  src: url("../fonts/SVN-Gilroy Regular.ttf");
+}
+@font-face {
+  font-family: "Gilroy SemiBold";
+  font-style: normal;
+  src: url("../fonts/SVN-Gilroy SemiBold.ttf");
+}
+@font-face {
+  font-family: "Gilroy Thin";
+  font-style: normal;
+  src: url("../fonts/SVN-Gilroy Thin.ttf");
+}
+/* ---------- End Fonts ---------- */
+/* ---------- Global Changes ---------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.modal .modal-content form input, .modal .modal-content form textarea {
+  margin-top: 0.5rem;
+}
+
+.v-label.v-label--active.theme--light {
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  opacity: 0.7 !important;
+  font-family: "Gilroy Regular";
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* ---------- End Global Changes ---------- */
+/* ---------- Home Page ---------- */
+#homePage div#content {
+  height: 100vh;
+  width: 100%;
+  margin-left: auto;
+  position: relative;
+}
+#homePage div#content div#itemsMenu {
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #2693FF;
+  width: 100%;
+}
+#homePage div#content div#itemsMenu > div {
+  width: 100%;
+}
+#homePage div#content div#itemsMenu span {
+  display: block;
+  text-align: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(191, 218, 235, 0.5);
+  width: 100%;
+}
+#homePage div#content div#itemsMenu span:hover {
+  background-color: #1182F2;
+  cursor: pointer;
+}
+#homePage div#content div#itemsMenu span.active {
+  background-color: #1182F2;
+}
+#homePage div#content div#itemsMenu span#first {
+  border-top: 1px solid rgba(191, 218, 235, 0.5);
+}
+#homePage div#content div#itemsMenu svg {
+  display: block;
+  font-size: 1.6rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+#homePage div#content div#itemsMenu p {
+  font-size: 0.45rem;
+  margin-top: 0.5rem;
+  color: #FFFFFF;
+  font-family: "Gilroy Regular";
+  background-color: transparent;
+}
+#homePage div#content div#subMain {
+  position: relative;
+  height: 100vh;
+  background-color: #E9F4FB;
+}
+#homePage div#content div#spacer {
+  height: 1vh;
+  background-color: #F4FBFF;
+}
+#homePage div#content #leftContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 7px 7px 12px -17px rgba(0, 0, 0, 0.95);
+  background-color: #F4FBFF;
+  height: 22%;
+}
+#homePage div#content #leftContent > div > button {
+  margin-left: 1rem;
+}
+#homePage div#content #leftContent button#onlyInPending, #homePage div#content #leftContent button#onlyInProgress, #homePage div#content #leftContent button#onlyFinished {
+  display: none;
+}
+#homePage div#content #leftContent button.roundedUrgent button,
+#homePage div#content #leftContent button.roundedImportant button,
+#homePage div#content #leftContent button.roundedOthers button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16px;
+  width: 16px;
+  color: #FFFFFF;
+  text-align: center;
+  vertical-align: center;
+  line-height: 1;
+  border-radius: 50%;
+  margin-left: 0.3rem;
+  padding: 0.7rem;
+  margin-bottom: 0;
+}
+#homePage div#content #leftContent button.roundedUrgent button {
+  background-color: #FF4874;
+}
+#homePage div#content #leftContent button.roundedImportant button {
+  background-color: #FFC42E;
+}
+#homePage div#content #leftContent button.roundedOthers button {
+  background-color: #2693FF;
+}
+#homePage div#content #leftContent h4 {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-family: "Gilroy Medium";
+  opacity: 0.85;
+}
+#homePage div#content #leftContent button {
+  background-color: transparent;
+  font-family: "Gilroy SemiBold";
+  margin-bottom: 0.3rem;
+  display: block;
+  font-size: 0.8rem;
+}
+#homePage div#content #leftContent button.active {
+  color: #2693FF;
+}
+#homePage div#content #leftContent button:hover {
+  color: #2693FF;
+}
+#homePage div#content #leftContent button svg {
+  font-size: 0.55rem;
+  padding-right: 0.4rem;
+}
+#homePage div#content #rightContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E9F4FB;
+  height: 68%;
+  margin-left: auto;
+  font-family: "Gilroy Medium";
+  overflow-y: auto;
+}
+#homePage div#content #rightContent > div {
+  min-height: 85%;
+  max-height: 85%;
+  min-width: 90%;
+  max-width: 90%;
+}
+#homePage div#content #rightContent h3 {
+  margin-bottom: 0.3rem;
+}
+#homePage div#content #rightContent p {
+  color: #77899E;
+}
+#homePage div#content #rightContent span.active {
+  color: #2693FF;
+}
+#homePage div#content #rightContent span.active#quantTask {
+  text-decoration: underline;
+}
+#homePage div#content #rightContent .input-container {
+  display: flex;
+  border-radius: 4px;
+  border: 2px solid #BFDAEB;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#homePage div#content #rightContent div.items.taskActive {
+  background-color: #F4FAFD;
+}
+#homePage div#content #rightContent div.items.taskActive span.descItem {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+#homePage div#content #rightContent div.items.taskActive svg {
+  color: #1AD18F;
+  opacity: 0.6;
+}
+#homePage div#content #rightContent div.items.taskActive span.descItem {
+  opacity: 0.6;
+}
+#homePage div#content #rightContent div.items.taskActive div.final div.chip {
+  opacity: 0.6;
+}
+#homePage div#content #rightContent div.items {
+  word-break: break-all;
+  margin-bottom: 0.5rem;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+#homePage div#content #rightContent div.items > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#homePage div#content #rightContent div.items div.left {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+#homePage div#content #rightContent div.items div.final {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  min-width: 50%;
+}
+#homePage div#content #rightContent div.items div.final .editPen, #homePage div#content #rightContent div.items div.final .deleteTrash {
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  margin-right: 0.5rem;
+}
+#homePage div#content #rightContent div.items div.final .editPen svg, #homePage div#content #rightContent div.items div.final .deleteTrash svg {
+  font-size: 1.25rem !important;
+  min-width: 5px !important;
+}
+#homePage div#content #rightContent div.items div.final .editPen svg {
+  color: #FFC42E;
+}
+#homePage div#content #rightContent div.items div.final .deleteTrash svg {
+  color: #FF4874;
+}
+#homePage div#content #rightContent div.items div.final .dropbtn {
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  position: relative;
+  margin-right: 0.5rem;
+}
+#homePage div#content #rightContent div.items div.final .dropbtn svg {
+  font-size: 1.25rem !important;
+  min-width: 5px !important;
+}
+#homePage div#content #rightContent div.items div.final .dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 0.35rem 0 0 0.3rem;
+}
+#homePage div#content #rightContent div.items div.final .dropdown:hover .dropdown-content {
+  display: block !important;
+}
+#homePage div#content #rightContent div.items div.final .chip {
+  display: inline-block;
+  color: white;
+  padding: 2px 13px;
+  height: 17px;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 25px;
+  margin: auto 0 auto auto;
+}
+#homePage div#content #rightContent div.items div.final .chip.urgent {
+  background-color: #FF4874;
+}
+#homePage div#content #rightContent div.items div.final .chip.important {
+  background-color: #FFC42E;
+}
+#homePage div#content #rightContent div.items div.final .chip.others {
+  background-color: #2693FF;
+}
+#homePage div#content #rightContent div.items span {
+  font-family: "Gilroy SemiBold";
+  cursor: pointer;
+}
+#homePage div#content #rightContent div.items svg {
+  font-size: 1.7rem;
+  color: #E2EEF5;
+  cursor: pointer;
+}
+#homePage div#content #rightContent div.items button {
+  margin-left: auto;
+  background-color: transparent;
+}
+#homePage div#content #rightContent div.items button svg {
+  color: #BFDAEB;
+}
+#homePage div#content #rightContent svg {
+  color: #BFDAEB;
+  min-width: 50px;
+  text-align: center;
+  position: relative;
+  margin: auto 0;
+  top: 50%;
+  right: 0;
+  cursor: text;
+}
+#homePage div#content #rightContent .input-field {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: transparent;
+  position: relative;
+  color: #77899E;
+}
+#homePage div#content #addTask {
+  background-color: #1AD18F;
+  color: #FFFFFF;
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  font-size: 1.5rem;
+  bottom: 0;
+  padding: 1rem;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ---------- End Home Page ---------- */
+/* ---------- Modals ---------- */
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal .titleS {
+  font-family: "Gilroy Regular";
+  font-weight: 600;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+.modal .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  /* Close Button */
+}
+.modal .modal-content .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.modal .modal-content .close:hover, .modal .modal-content .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal .modal-content h3 {
+  display: inline-block;
+  font-family: "Gilroy Bold";
+  margin-bottom: 1.5rem;
+}
+.modal .modal-content span {
+  margin-left: auto;
+  margin-bottom: 0.3rem;
+}
+.modal .modal-content form {
+  font-family: "Gilroy Regular";
+}
+.modal .modal-content form span {
+  font-weight: 600;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+.modal .modal-content form input, .modal .modal-content form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  font-family: "Gilroy Semibold";
+  border: 2px solid #BFDAEB;
+  border-radius: 4px;
+  padding: 0.5rem;
+  opacity: 0.8;
+  font-size: 0.85rem;
+}
+.modal .modal-content form input:focus-visible, .modal .modal-content form textarea:focus-visible {
+  outline: none;
+  border: 2px solid #2693FF;
+}
+.modal .modal-content form textarea {
+  resize: none;
+}
+.modal .modalFooter, .modal .modalStatusFooter {
+  padding-bottom: 1rem;
+}
+.modal .modalFooter span, .modal .modalStatusFooter span {
+  margin-right: 0.5rem;
+  font-family: "Gilroy Regular";
+  font-weight: 600;
+  font-size: 0.7rem;
+  opacity: 0.7;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.modal .modalFooter span button, .modal .modalStatusFooter span button {
+  background-color: transparent;
+  border: 2px solid #BFDAEB;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin-right: 0.3rem;
+}
+.modal .modalFooter span button.buttonActive, .modal .modalStatusFooter span button.buttonActive {
+  background-color: #1AD18F;
+}
+.modal .modalFooter button#add, .modal .modalFooter button#cancelEdit, .modal .modalFooter button#saveButton, .modal .modalStatusFooter button#add, .modal .modalStatusFooter button#cancelEdit, .modal .modalStatusFooter button#saveButton {
+  float: right;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+.modal .modalFooter button#add.buttonActive, .modal .modalFooter button#cancelEdit.buttonActive, .modal .modalFooter button#saveButton.buttonActive, .modal .modalStatusFooter button#add.buttonActive, .modal .modalStatusFooter button#cancelEdit.buttonActive, .modal .modalStatusFooter button#saveButton.buttonActive {
+  background-color: #A6C1D2;
+}
+.modal .modalFooter button#add, .modal .modalStatusFooter button#add {
+  background-color: #1AD18F;
+}
+.modal .modalFooter button#cancelEdit, .modal .modalStatusFooter button#cancelEdit {
+  background-color: #A6C1D2;
+}
+.modal .modalFooter button#saveButton, .modal .modalStatusFooter button#saveButton {
+  background-color: #1AD18F;
+  margin-right: 0.3rem;
+  margin-left: 0.3rem;
+}
+.modal .modalFooter div#checkbox, .modal .modalStatusFooter div#checkbox {
+  margin-bottom: 0.5rem;
+  font-family: "Gilroy Regular";
+  font-weight: 600;
+  opacity: 0.7;
+  font-size: 0.7rem;
+}
+.modal .modalFooter div#checkbox input, .modal .modalStatusFooter div#checkbox input {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  vertical-align: middle;
+  -moz-appearance: none;
+       appearance: none;
+  border: 2px solid #BFDAEB;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.modal .modalFooter div#checkbox input.active, .modal .modalStatusFooter div#checkbox input.active {
+  background-color: #1AD18F;
+}
+.modal .modalFooter div#checkbox label, .modal .modalStatusFooter div#checkbox label {
+  vertical-align: middle;
+  cursor: pointer;
+  margin-left: 0.3rem;
+}
+
+.modalDelete {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-family: "Gilroy Regular";
+}
+.modalDelete .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  border-radius: 4px;
+}
+.modalDelete .modal-content div#icon {
+  background-color: #EDF6FC;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  padding: 0.7rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modalDelete .modal-content div#icon svg {
+  height: 70px;
+  width: 70px;
+  color: #77899E;
+}
+.modalDelete .modal-content h3 {
+  line-height: 1;
+  margin-top: 0.7rem;
+  margin-bottom: 0;
+}
+.modalDelete .modal-content h3 span {
+  color: #FF4874;
+}
+.modalDelete .modal-content span#subTitle {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-family: "Gilroy Regular";
+  font-weight: 600;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+.modalDelete .modal-content button {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+.modalDelete .modal-content button#cancel {
+  background-color: #1AD18F;
+}
+.modalDelete .modal-content button#confirm {
+  background-color: #FF4874;
+}
+
+/* ---------- End Modals ---------- */
+/* ---------- Media Queries ---------- */
+@media (max-width: 450px) {
+  .modalDelete .modal-content, .modal .modal-content {
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+  }
+}
+@media (min-width: 576px) {
+  #rightContent .dropdown {
+    padding: 0.35rem 0.5rem 0 0.5rem !important;
+  }
+  #homePage div#content div#itemsMenu p {
+    font-size: 0.6rem;
+  }
+  #homePage div#content #leftContent {
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+  #homePage div#content #leftContent h4 {
+    display: none;
+  }
+  #homePage div#content #leftContent > div {
+    display: flex;
+    align-items: center;
+  }
+  #homePage div#content #leftContent > div > button {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 768px) {
+  #homePage div#content div#itemsMenu p {
+    font-size: 0.7rem;
+  }
+  #homePage div#content div#spacer {
+    display: none;
+  }
+  #homePage div#content #leftContent {
+    height: 100%;
+    width: 180px;
+    float: left;
+  }
+  #homePage div#content #leftContent button#onlyInPending, #homePage div#content #leftContent button#onlyInProgress, #homePage div#content #leftContent button#onlyFinished {
+    display: block;
+  }
+  #homePage div#content #leftContent h4 {
+    display: block;
+  }
+  #homePage div#content #leftContent > div {
+    display: block;
+  }
+  #homePage div#content #leftContent h4 {
+    margin-bottom: 3rem;
+  }
+  #homePage div#content #leftContent button {
+    margin-bottom: 0.8rem;
+    font-size: 1rem !important;
+  }
+  #homePage div#content #leftContent #onlyFinished {
+    margin-bottom: 0;
+  }
+  #homePage div#content #rightContent {
+    height: 100%;
+  }
+  #homePage div#content #rightContent h3 {
+    font-size: 1.3em;
+  }
+  #homePage div#content #rightContent > div {
+    min-height: 70%;
+    max-height: 70%;
+    max-width: 95%;
+  }
+  #homePage div#content #rightContent > div > p {
+    font-size: 1.1rem;
+  }
+  #homePage div#content #rightContent div.items div.final {
+    min-width: 30% !important;
+  }
+  .modal .modal-content {
+    max-width: 70%;
+  }
+  .modal div.modalFooter span, .modal div.modalStatusFooter span {
+    font-size: 0.8rem;
+  }
+  .modal div.modalFooter div#checkbox, .modal div.modalStatusFooter div#checkbox {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 992px) {
+  #rightContent > div {
+    min-width: 70% !important;
+  }
+  #rightContent > div > p {
+    font-size: 1.25rem !important;
+  }
+  .modalDelete .modal-content {
+    width: 25%;
+  }
+  #homePage div#content div#itemsMenu p {
+    font-size: 0.9rem !important;
+  }
+  #homePage div#content #rightContent .input-field {
+    font-size: 1.1rem !important;
+  }
+  #homePage div#content #rightContent div.items div.left {
+    font-size: 1.1rem !important;
+  }
+  #homePage div#content #rightContent div.items .chip {
+    font-size: 1.1rem !important;
+    line-height: 1 !important;
+    padding: 4px 13px !important;
+  }
+}
+/* ---------- End Media Queries ---------- *//*# sourceMappingURL=style.css.map */
