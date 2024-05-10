@@ -82,3 +82,23 @@ Salve o arquivo após realizar as alterações.
 4. **Acesso à aplicação**:
    - Uma vez que a aplicação esteja rodando, você pode acessá-la pelo navegador na URL:
      [http://localhost:8080/](http://localhost:8080/)
+
+## Tutorial de Uso
+
+Aqui estão as instruções básicas para utilizar o sistema de controle de tarefas:
+
+- **Criar uma nova tarefa**: Clique no botão verde com o símbolo "+" localizado no canto inferior direito da tela.
+- **Editar uma tarefa**: Clique no ícone de lápis encontrado ao lado de cada tarefa no grid para fazer alterações.
+- **Deletar uma tarefa**: Clique no ícone de lixeira ao lado da tarefa que deseja remover.
+- **Pesquisar tarefas**: Utilize o campo de pesquisa abaixo do título "Minhas Tarefas" para filtrar tarefas por título ou descrição.
+- **Ordenar tarefas**: Clique nos cabeçalhos das colunas no grid para ordenar as tarefas de forma ascendente ou descendente.
+- **Filtrar tarefas por categoria ou status**: Selecione uma das opções (Todas, Urgentes, Importantes, Outras) próximas ao título "Minhas Tarefas" para filtrar as tarefas conforme a categoria ou status desejado.
+
+## Imagens do Sistema
+
+![Screenshot do Sistema](assets/MINHAS_TAREFAS.png)
+![Screenshot do Sistema](assets/MINHAS_TAREFAS_2.png)
+![Screenshot do Sistema](assets/CADASTRAR_TAREFA.png)
+![Screenshot do Sistema](assets/EDITAR_TAREFA.png)
+![Screenshot do Sistema](assets/EXCLUIR_TAREFA.png)
+![Screenshot do Sistema](assets/FILTROS.png)
